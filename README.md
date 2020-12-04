@@ -1,2 +1,1 @@
-# portfolio-repository
-My portfolio website 
+# jayvardhanrathi.tech
