@@ -1,0 +1,863 @@
+/*
+                        _______
+                       /       \
+                      .==.    .==.
+                     ((  ))==((  ))
+                    / "=="    "=="\
+                   /____|| || ||___\
+       ________     ____    ________  ___    ___
+       |  ___  \   /    \   |  ___  \ |  |  /  /
+       |  |  \  \ /  /\  \  |  |  \  \|  |_/  /
+       |  |   )  /  /__\  \ |  |__/  /|  ___  \
+       |  |__/  /  ______  \|  ____  \|  |  \  \
+_______|_______/__/ ____ \__\__|___\__\__|___\__\____
+|  ___  \ |  ____/ /    \   |  ___  \ |  ____|  ___  \
+|  |  \  \|  |___ /  /\  \  |  |  \  \|  |___|  |  \  \
+|  |__/  /|  ____/  /__\  \ |  |   )  |  ____|  |__/  /
+|  ____  \|  |__/  ______  \|  |__/  /|  |___|  ____  \
+|__|   \__\____/__/      \__\_______/ |______|__|   \__\
+                https://darkreader.org
+*/
+/* User-Agent Style */
+html {
+  background-color: #181a1b !important;
+}
+html,
+body,
+input,
+textarea,
+select,
+button {
+  background-color: #181a1b;
+}
+html,
+body,
+input,
+textarea,
+select,
+button {
+  border-color: #736b5e;
+  color: #e8e6e3;
+}
+a {
+  color: #3391ff;
+}
+table {
+  border-color: #545b5e;
+}
+::placeholder {
+  color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: #555b00 !important;
+  color: #e8e6e3 !important;
+}
+::selection {
+  background-color: #004daa !important;
+  color: #e8e6e3 !important;
+}
+::-moz-selection {
+  background-color: #004daa !important;
+  color: #e8e6e3 !important;
+}
+
+/* Invert Style */
+.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe
+{
+  filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}
+
+/* Variables Style */
+:root {
+  --darkreader-neutral-background: #131516;
+  --darkreader-neutral-text: #d8d4cf;
+  --darkreader-selection-background: #004daa;
+  --darkreader-selection-text: #e8e6e3;
+}
+
+/* Modified CSS */
+#i-amphtml-wrapper > body {
+  border-top-color: transparent !important;
+}
+amp-instagram {
+  background-color: rgb(24, 26, 27);
+}
+.i-amphtml-jank-meter {
+  background-color: rgba(155, 19, 39, 0.5);
+  color: rgb(232, 230, 227);
+}
+amp-story[standalone] {
+  background-color: rgb(26, 28, 29) !important;
+}
+amp-story-page {
+  background-color: rgb(88, 95, 99);
+}
+amp-autocomplete > input,
+amp-autocomplete > textarea {
+  border-color: rgba(140, 130, 115, 0.33);
+}
+.i-amphtml-replaced-content,
+.i-amphtml-screen-reader {
+  border-color: initial !important;
+}
+.i-amphtml-notbuilt,
+[layout]:not(.i-amphtml-element),
+[width][height][heights]:not([layout]):not(.i-amphtml-element),
+[width][height][sizes]:not([layout]):not(.i-amphtml-element) {
+  color: transparent !important;
+}
+.i-amphtml-notbuilt:not(.i-amphtml-layout-container),
+[layout]:not([layout="container"]):not(.i-amphtml-element),
+[width][height][heights]:not([layout]):not(.i-amphtml-element),
+[width][height][sizes]:not([layout]):not(.i-amphtml-element) {
+  color: transparent !important;
+}
+.i-amphtml-element-error {
+  background-image: initial !important;
+  background-color: rgb(204, 0, 0) !important;
+  color: rgb(232, 230, 227) !important;
+}
+.i-amphtml-lbg-caption-scroll {
+  color: rgb(232, 230, 227);
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 0px 5px !important;
+}
+[i-amphtml-lbg-caption-state="clip"] + .i-amphtml-lbg-caption-mask {
+  background-image: initial !important;
+  background-color: transparent !important;
+}
+[i-amphtml-lbg-caption-state="expand"] + .i-amphtml-lbg-caption-mask {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+.i-amphtml-lbg-top-bar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background-color: initial;
+}
+.i-amphtml-lbg-button[data-action="close"]::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.4 6.4l11.2 11.2zm11.2 0L6.4 17.6z' stroke='%23fff' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.i-amphtml-lbg-button[data-action="gallery"]::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff'%3E%3Crect x='3' y='3' width='6' height='8' rx='1' ry='1'/%3E%3Crect x='15' y='13' width='6' height='8' rx='1' ry='1'/%3E%3Crect x='11' y='3' width='10' height='8' rx='1' ry='1'/%3E%3Crect x='3' y='13' width='10' height='8' rx='1' ry='1'/%3E%3C/g%3E%3C/svg%3E");
+}
+.i-amphtml-lbg-button[data-action="slides"]::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='4' y='4' width='16' height='16' rx='1' stroke-width='2' stroke='%23fff' fill='none'/%3E%3Ccircle fill='%23fff' cx='15.5' cy='8.5' r='1.5'/%3E%3Cpath fill='%23fff' d='M5 19v-6l3-3 5 5 3-3 3 3v4z'/%3E%3C/svg%3E");
+}
+.i-amphtml-lbg-button[data-action="next"]::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 7.4l4.6 4.6-4.6 4.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.i-amphtml-lbg-button[data-action="prev"]::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 7.4L9.4 12l4.6 4.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+amp-lightbox-gallery amp-carousel {
+  background-image: initial !important;
+  background-color: transparent !important;
+}
+.i-amphtml-lbg-gallery,
+.i-amphtml-lbg-mask {
+  background-color: rgb(0, 0, 0) !important;
+}
+.i-amphtml-lbg-thumbnail-timestamp-container {
+  background-color: rgb(35, 38, 39);
+  color: rgb(232, 230, 227);
+}
+.i-amphtml-lbg-thumbnail-play-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+}
+* {
+  outline-color: initial;
+}
+:focus {
+  outline-color: initial;
+}
+body {
+  color: rgb(183, 176, 167);
+}
+section {
+  background-color: rgb(34, 36, 38);
+}
+a,
+a:hover {
+  text-decoration-color: initial;
+}
+a.mbr-iconfont:hover {
+  text-decoration-color: initial;
+}
+blockquote {
+  border-left-color: initial;
+}
+.mbr-white {
+  color: rgb(232, 230, 227);
+}
+.mbr-black {
+  color: rgb(232, 230, 227);
+}
+.mobirise-spinner em {
+  background-image: initial;
+  background-color: rgb(41, 136, 163);
+}
+.btn {
+  border-color: initial;
+}
+.link.dropdown-toggle::after {
+  border-top-color: initial;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: initial;
+}
+@media (max-width: 991px) {
+  .dropdown-toggle[data-toggle="dropdown-submenu"]::after {
+    border-top-color: initial;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: initial;
+  }
+}
+.hamburger span {
+  border-right-color: initial;
+}
+.ampstart-btn.hamburger {
+  background-image: none;
+  background-color: initial;
+  border-color: initial;
+}
+@media (min-width: 992px) {
+  .dropdown-menu .dropdown-toggle::after {
+    border-bottom-color: transparent;
+    border-left-color: initial;
+    border-right-color: initial;
+    border-top-color: transparent;
+  }
+}
+.close-sidebar {
+  background-color: transparent;
+  border-color: initial;
+}
+.close-sidebar span {
+  border-right-color: initial;
+}
+section.sidebar-open::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#sidebar {
+  background-color: transparent;
+}
+.card {
+  background-color: transparent;
+  border-color: initial;
+}
+.timeline-wrap .iconBackground {
+  background-color: rgb(0, 0, 0);
+}
+.separline::before {
+  background-color: rgb(0, 0, 0);
+}
+.gallery-img-wrap::after {
+  background-image: initial;
+  background-color: rgb(0, 0, 0);
+}
+.gallery-img-wrap .icon-wrap {
+  background-color: rgb(24, 26, 27);
+}
+.gallery-img-wrap .amp-iconfont {
+  color: rgb(232, 230, 227);
+}
+.amp-carousel-button,
+.dots-wrapper .dots span {
+  outline-color: initial;
+}
+.dots-wrapper .dots span {
+  background-color: rgb(24, 26, 27);
+  border-color: rgb(62, 68, 70);
+}
+amp-image-lightbox,
+.lightbox {
+  background-image: initial;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+amp-image-lightbox .close,
+.lightbox .close {
+  background-image: none;
+  background-color: initial;
+  border-color: initial;
+}
+amp-image-lightbox .close::before,
+amp-image-lightbox .close::after,
+.lightbox .close::before,
+.lightbox .close::after {
+  background-color: rgb(24, 26, 27);
+}
+.form-block {
+  background-color: transparent;
+}
+form input,
+form textarea,
+form select {
+  background-image: initial;
+  background-color: rgb(24, 26, 27);
+  border-color: rgb(101, 94, 83);
+  color: rgb(232, 230, 227);
+}
+form input[type="checkbox"],
+form input[type="radio"] {
+  border-color: initial;
+  background-image: none;
+  background-color: initial;
+}
+#scrollToTopButton {
+  border-color: initial;
+}
+#scrollToTopButton:focus {
+  outline-color: initial;
+}
+#scrollToTopButton a::after {
+  border-top-color: initial;
+  border-right-color: initial;
+}
+blockquote {
+  border-color: rgb(22, 89, 141);
+}
+div[submit-success] > * {
+  background-image: initial;
+  background-color: rgb(10, 164, 98);
+  color: rgb(232, 230, 227);
+}
+div[submit-error] > * {
+  background-image: initial;
+  background-color: rgb(78, 84, 87);
+  color: rgb(232, 230, 227);
+}
+.bg-primary {
+  background-color: rgb(24, 95, 150);
+}
+.bg-success {
+  background-color: rgb(10, 164, 98);
+}
+.bg-info {
+  background-color: rgb(23, 23, 118);
+}
+.bg-warning {
+  background-color: rgb(89, 96, 100);
+}
+.bg-danger {
+  background-color: rgb(78, 84, 87);
+}
+.btn-primary,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: rgb(24, 95, 150);
+  border-color: rgb(22, 89, 141);
+  color: rgb(232, 230, 227);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(25, 100, 158);
+  border-color: rgb(25, 102, 161);
+}
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(25, 100, 158);
+  border-color: rgb(25, 102, 161);
+}
+.btn-secondary,
+.btn-secondary:active,
+.btn-secondary.active {
+  background-color: rgb(0, 130, 160);
+  border-color: rgb(0, 127, 156);
+  color: rgb(209, 205, 199);
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary.focus {
+  color: rgb(209, 205, 199);
+  background-color: rgb(0, 164, 202);
+  border-color: rgb(0, 145, 179);
+}
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+  color: rgb(209, 205, 199);
+  background-color: rgb(0, 164, 202);
+  border-color: rgb(0, 145, 179);
+}
+.btn-info,
+.btn-info:active,
+.btn-info.active {
+  background-color: rgb(23, 23, 118);
+  border-color: rgb(24, 24, 123);
+  color: rgb(232, 230, 227);
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(30, 30, 156);
+  border-color: rgb(27, 27, 142);
+}
+.btn-info.disabled,
+.btn-info:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(30, 30, 156);
+  border-color: rgb(27, 27, 142);
+}
+.btn-success,
+.btn-success:active,
+.btn-success.active {
+  background-color: rgb(10, 164, 98);
+  border-color: rgb(11, 178, 107);
+  color: rgb(232, 230, 227);
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(6, 106, 64);
+  border-color: rgb(12, 201, 121);
+}
+.btn-success.disabled,
+.btn-success:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(6, 106, 64);
+  border-color: rgb(12, 201, 121);
+}
+.btn-warning,
+.btn-warning:active,
+.btn-warning.active {
+  background-color: rgb(89, 96, 100);
+  border-color: rgb(101, 94, 83);
+  color: rgb(232, 230, 227);
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(60, 65, 68);
+  border-color: rgb(114, 106, 93);
+}
+.btn-warning.disabled,
+.btn-warning:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(60, 65, 68);
+  border-color: rgb(114, 106, 93);
+}
+.btn-danger,
+.btn-danger:active,
+.btn-danger.active {
+  background-color: rgb(78, 84, 87);
+  border-color: rgb(75, 81, 84);
+  color: rgb(232, 230, 227);
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(92, 100, 103);
+  border-color: rgb(100, 93, 82);
+}
+.btn-danger.disabled,
+.btn-danger:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(92, 100, 103);
+  border-color: rgb(100, 93, 82);
+}
+.btn-black,
+.btn-black:active,
+.btn-black.active {
+  background-color: rgb(38, 42, 43);
+  border-color: rgb(123, 114, 101);
+  color: rgb(232, 230, 227);
+}
+.btn-black:hover,
+.btn-black:focus,
+.btn-black.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(10, 11, 11);
+  border-color: rgb(136, 126, 111);
+}
+.btn-black.disabled,
+.btn-black:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(10, 11, 11);
+  border-color: rgb(136, 126, 111);
+}
+.btn-white,
+.btn-white:active,
+.btn-white.active {
+  background-color: rgb(24, 26, 27);
+  border-color: rgb(48, 52, 54);
+  color: rgb(152, 143, 129);
+}
+.btn-white:hover,
+.btn-white:focus,
+.btn-white.focus {
+  color: rgb(152, 143, 129);
+  background-color: rgb(45, 49, 51);
+  border-color: rgb(59, 64, 66);
+}
+.btn-white.disabled,
+.btn-white:disabled {
+  color: rgb(152, 143, 129);
+  background-color: rgb(45, 49, 51);
+  border-color: rgb(59, 64, 66);
+}
+.btn-white,
+.btn-white:active,
+.btn-white.active {
+  color: rgb(200, 195, 188);
+}
+.btn-white:hover,
+.btn-white:focus,
+.btn-white.focus {
+  color: rgb(200, 195, 188);
+}
+.btn-white.disabled,
+.btn-white:disabled {
+  color: rgb(200, 195, 188);
+}
+.btn-primary-outline,
+.btn-primary-outline:active,
+.btn-primary-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(27, 106, 167);
+  color: rgb(106, 178, 231);
+}
+.btn-primary-outline:hover,
+.btn-primary-outline:focus,
+.btn-primary-outline.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(24, 95, 150);
+  border-color: rgb(22, 89, 141);
+}
+.btn-primary-outline.disabled,
+.btn-primary-outline:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(24, 95, 150);
+  border-color: rgb(22, 89, 141);
+}
+.btn-secondary-outline,
+.btn-secondary-outline:active,
+.btn-secondary-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(0, 151, 187);
+  color: rgb(45, 215, 255);
+}
+.btn-secondary-outline:hover,
+.btn-secondary-outline:focus,
+.btn-secondary-outline.focus {
+  color: rgb(209, 205, 199);
+  background-color: rgb(0, 130, 160);
+  border-color: rgb(0, 127, 156);
+}
+.btn-secondary-outline.disabled,
+.btn-secondary-outline:disabled {
+  color: rgb(209, 205, 199);
+  background-color: rgb(0, 130, 160);
+  border-color: rgb(0, 127, 156);
+}
+.btn-info-outline,
+.btn-info-outline:active,
+.btn-info-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(28, 28, 149);
+  color: rgb(64, 121, 219);
+}
+.btn-info-outline:hover,
+.btn-info-outline:focus,
+.btn-info-outline.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(23, 23, 118);
+  border-color: rgb(24, 24, 123);
+}
+.btn-info-outline.disabled,
+.btn-info-outline:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(23, 23, 118);
+  border-color: rgb(24, 24, 123);
+}
+.btn-success-outline,
+.btn-success-outline:active,
+.btn-success-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(13, 207, 123);
+  color: rgb(131, 247, 197);
+}
+.btn-success-outline:hover,
+.btn-success-outline:focus,
+.btn-success-outline.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(10, 164, 98);
+  border-color: rgb(11, 178, 107);
+}
+.btn-success-outline.disabled,
+.btn-success-outline:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(10, 164, 98);
+  border-color: rgb(11, 178, 107);
+}
+.btn-warning-outline,
+.btn-warning-outline:active,
+.btn-warning-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(118, 110, 97);
+  color: rgb(190, 184, 176);
+}
+.btn-warning-outline:hover,
+.btn-warning-outline:focus,
+.btn-warning-outline.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(89, 96, 100);
+  border-color: rgb(101, 94, 83);
+}
+.btn-warning-outline.disabled,
+.btn-warning-outline:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(89, 96, 100);
+  border-color: rgb(101, 94, 83);
+}
+.btn-danger-outline,
+.btn-danger-outline:active,
+.btn-danger-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(104, 97, 86);
+  color: rgb(163, 155, 143);
+}
+.btn-danger-outline:hover,
+.btn-danger-outline:focus,
+.btn-danger-outline.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(78, 84, 87);
+  border-color: rgb(75, 81, 84);
+}
+.btn-danger-outline.disabled,
+.btn-danger-outline:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(78, 84, 87);
+  border-color: rgb(75, 81, 84);
+}
+.btn-black-outline,
+.btn-black-outline:active,
+.btn-black-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(140, 130, 115);
+  color: rgb(232, 230, 227);
+}
+.btn-black-outline:hover,
+.btn-black-outline:focus,
+.btn-black-outline.focus {
+  color: rgb(232, 230, 227);
+  background-color: rgb(38, 42, 43);
+  border-color: rgb(123, 114, 101);
+}
+.btn-black-outline.disabled,
+.btn-black-outline:disabled {
+  color: rgb(232, 230, 227);
+  background-color: rgb(38, 42, 43);
+  border-color: rgb(123, 114, 101);
+}
+.btn-white-outline,
+.btn-white-outline:active,
+.btn-white-outline.active {
+  background-image: none;
+  background-color: initial;
+  border-color: rgb(48, 52, 54);
+  color: rgb(232, 230, 227);
+}
+.btn-white-outline:hover,
+.btn-white-outline:focus,
+.btn-white-outline.focus {
+  color: rgb(200, 195, 188);
+  background-color: rgb(24, 26, 27);
+  border-color: rgb(48, 52, 54);
+}
+.text-primary {
+  color: rgb(87, 168, 228);
+}
+.text-secondary {
+  color: rgb(77, 222, 255);
+}
+.text-success {
+  color: rgb(64, 243, 166);
+}
+.text-info {
+  color: rgb(125, 163, 230);
+}
+.text-warning {
+  color: rgb(157, 149, 136);
+}
+.text-danger {
+  color: rgb(172, 165, 154);
+}
+.text-white {
+  color: rgb(232, 230, 227);
+}
+.text-black {
+  color: rgb(232, 230, 227);
+}
+a.text-primary:hover,
+a.text-primary:focus {
+  color: rgb(106, 178, 231);
+}
+a.text-secondary:hover,
+a.text-secondary:focus {
+  color: rgb(45, 215, 255);
+}
+a.text-success:hover,
+a.text-success:focus {
+  color: rgb(131, 247, 197);
+}
+a.text-info:hover,
+a.text-info:focus {
+  color: rgb(64, 121, 219);
+}
+a.text-warning:hover,
+a.text-warning:focus {
+  color: rgb(190, 184, 176);
+}
+a.text-danger:hover,
+a.text-danger:focus {
+  color: rgb(163, 155, 143);
+}
+a.text-white:hover,
+a.text-white:focus {
+  color: rgb(184, 178, 169);
+}
+a.text-black:hover,
+a.text-black:focus {
+  color: rgb(183, 177, 168);
+}
+.alert-success {
+  background-color: rgb(10, 164, 98);
+}
+.alert-info {
+  background-color: rgb(23, 23, 118);
+}
+.alert-warning {
+  background-color: rgb(89, 96, 100);
+}
+.alert-danger {
+  background-color: rgb(78, 84, 87);
+}
+a,
+a:hover {
+  color: rgb(87, 168, 228);
+}
+.mbr-plan-header.bg-primary .mbr-plan-subtitle,
+.mbr-plan-header.bg-primary .mbr-plan-price-desc {
+  color: rgb(203, 255, 255);
+}
+.mbr-plan-header.bg-success .mbr-plan-subtitle,
+.mbr-plan-header.bg-success .mbr-plan-price-desc {
+  color: rgb(149, 249, 206);
+}
+.mbr-plan-header.bg-info .mbr-plan-subtitle,
+.mbr-plan-header.bg-info .mbr-plan-price-desc {
+  color: rgb(232, 230, 227);
+}
+.mbr-plan-header.bg-warning .mbr-plan-subtitle,
+.mbr-plan-header.bg-warning .mbr-plan-price-desc {
+  color: rgb(186, 180, 171);
+}
+.mbr-plan-header.bg-danger .mbr-plan-subtitle,
+.mbr-plan-header.bg-danger .mbr-plan-price-desc {
+  color: rgb(212, 209, 203);
+}
+.mobirise-spinner em:nth-child(1) {
+  background-image: initial;
+  background-color: rgb(24, 95, 150);
+}
+.mobirise-spinner em:nth-child(2) {
+  background-image: initial;
+  background-color: rgb(0, 130, 160);
+}
+.mobirise-spinner em:nth-child(3) {
+  background-image: initial;
+  background-color: rgb(10, 164, 98);
+}
+#scrollToTopButton {
+  background-color: rgb(24, 95, 150);
+}
+#scrollToTopButton a::before {
+  background-image: initial;
+  background-color: rgb(24, 26, 27);
+}
+#scrollToTopButton a::after {
+  border-top-color: rgb(48, 52, 54);
+  border-right-color: rgb(48, 52, 54);
+}
+.cid-scQ3hsmWsm {
+  background-color: rgb(24, 26, 27);
+}
+.cid-scQ7H5y0n8 {
+  background-image: url("https://jayvardhanrathi.tech/assets/images/mbr-1920x1281.jpg");
+}
+.cid-scQd8xcJXC {
+  background-color: rgb(24, 26, 27);
+}
+.cid-scQd8xcJXC .counter-container li {
+  list-style-image: initial;
+}
+.cid-scQd8xcJXC .counter-container li::before {
+  color: rgb(232, 230, 227);
+  background-image: initial;
+  background-color: rgb(24, 95, 150);
+}
+.cid-scQdxfzi3L {
+  background-color: rgb(24, 26, 27);
+}
+.cid-scQdxfzi3L .counter-container li {
+  list-style-image: initial;
+}
+.cid-scQdxfzi3L .counter-container li::before {
+  color: rgb(232, 230, 227);
+  background-image: initial;
+  background-color: rgb(24, 95, 150);
+}
+.cid-scQnfiXW7m {
+  background-color: rgb(24, 26, 27);
+}
+.cid-scQg7jf9Ax {
+  background-color: rgb(24, 26, 27);
+}
+.cid-scQg7jf9Ax amp-img::after {
+  background-color: rgba(24, 95, 150, 0.5);
+}
+.cid-scQg7jf9Ax amp-img .item-sign {
+  background-color: rgba(24, 95, 150, 0.5);
+  color: rgb(232, 230, 227);
+}
+.cid-scQg7jf9Ax amp-img:hover .item-sign {
+  background-color: rgba(24, 95, 150, 0);
+}
+.cid-scQg7jf9Ax .item-box {
+  background-image: initial;
+  background-color: rgb(33, 36, 37);
+}
+.cid-scQg7jf9Ax .item-box-wrapper {
+  background-color: rgb(33, 36, 37);
+}
+
+/* Override Style */
+.vimvixen-hint {
+  background-color: #7b5300 !important;
+  border-color: #d8b013 !important;
+  color: #f3e8c8 !important;
+}
+::placeholder {
+  opacity: 0.5 !important;
+}
+a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path
+{
+  fill: var(--darkreader-neutral-text) !important;
+}
+#edge-translate-panel-body {
+  color: var(--darkreader-neutral-text) !important;
+}
